@@ -12,6 +12,7 @@ WORKDIR $IDEMPIERE_HOME
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends nano postgresql-client && \
+    apt-get install -y unzip && \
     rm -rf /var/lib/apt/lists/*
 
 RUN wget -q $IDEMPIERE_DAILY -O /tmp/idempiere-server.zip && \
